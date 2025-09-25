@@ -8,7 +8,7 @@ export default function Home() {
   ]);
   const [input, setInput] = useState("");
 
-  const sendMessage = (e) => {
+  const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessages([...messages, { sender: "user", text: input }]);
     setInput("");
